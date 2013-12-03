@@ -35,6 +35,10 @@ public class SELogUtil {
         TAG = tag;
     }
 
+    public SELogUtil(Class<?> clazz){
+        TAG = clazz.getSimpleName();
+    }
+
     public void d(String log){
         if (DEBUG){
             Log.d(TAG,log);
